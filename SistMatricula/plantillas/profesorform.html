@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+ <h2>Ingrese Datos del Profesor:</h2>
+
+	<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %}
+		{{formulario.as_p}}
+	<p><input type='submit' class="btn btn-primary btn-large" value='Confirmar'/></p>	
+
+</form>
+{% endblock %}

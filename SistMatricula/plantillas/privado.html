@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block titulo %} Bienvenido {% endblock %}
+{% block encabezado %}
+	<h1>BIENVENIDO </h1>
+{% endblock %}
+
+{% block contenido %}
+<p>BIENVENIDO {{usuario.username|upper}}, la utlima vez que te vimos por aquí fue el {{usuario.last_login}}.</p>
+<p>Eres miembro desde el {{usuario.date_joined}}</p>
+<p><a class="btn btn-primary btn-large", href="/cerrar"> Cerrar</a></p>
+{% endblock %}

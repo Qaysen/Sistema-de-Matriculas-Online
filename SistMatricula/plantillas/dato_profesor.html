@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Detalle del Profesor{%  endblock %}
+{% block encabezado %}
+	<h2><strong> Detalle del Profesor</strong></h1>
+{% endblock %}
+
+
+{% block contenido %}
+	<h2>Nombre:</h2>
+	<p>{{profesor.nombre}}</p>
+	<h2>Direcion:</h2>
+	<p>{{profesor.direccion}}</p>
+
+	<h2>Telefono:</h2>
+	<p>{{profesor.telefono}}</p>
+
+	<h2>Email:</h2>
+	<p>{{profesor.correo}}</p>
+
+	<h2>Cursos que tiene a cargo:</h2>
+	{% for elemento in cursos_dictados %}
+	<ul>
+	  <li><strong>{{elemento.curso.nombre}}</strong></li>
+	</ul>
+	{% endfor %}
+
+{% endblock %}

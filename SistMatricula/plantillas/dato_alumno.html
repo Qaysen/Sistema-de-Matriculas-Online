@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Detalle del Alumno{%  endblock %}
+{% block encabezado %}
+	<h2><strong> Detalle del Alumno</strong></h1>
+{% endblock %}
+
+{% block contenido %}
+	<h2>Nombre:</h2>
+	<p>{{alumno.nombre}}</p>
+	<h2>Direcion:</h2>
+	<p>{{alumno.direccion}}</p>
+
+	<h2>Telefono:</h2>
+	<p>{{alumno.telefono}}</p>
+
+	<h2>Email:</h2>
+	<p>{{alumno.correo}}</p>
+
+	<h2>Cursos Matriculados:</h2>
+	{% for elemento in cursos_matriculados %}
+	<ul>
+	  <li><strong>{{elemento.curso.nombre}}</strong></li>	  		
+	</ul>
+	{% endfor %}
+
+{% endblock %}

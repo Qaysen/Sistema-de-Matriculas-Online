@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Lista de Cursos{%  endblock %}
+{% block encabezado %}
+	<h1>Lista de Cursos </h1>
+{% endblock %}
+
+{% block nombre %}
+Muestra lista de cursos
+{% endblock %}
+
+{% block contenido %}
+
+	{% for elemento in cursos %}
+	<ul>
+	  <li><strong><a href="/dato-curso/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
+	</ul>
+	{% endfor %}
+	<p><a class="btn btn-primary btn-large", href="/nuevocur"> Ingresar nuevo curso &raquo;</a></p>
+{% endblock %}

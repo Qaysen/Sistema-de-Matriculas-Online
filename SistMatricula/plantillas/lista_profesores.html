@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Lista de Profesores {%  endblock %}
+{% block encabezado %}
+	<h1> Lista de Profesores </h1>
+{% endblock %}
+
+{% block nombre %}
+Muestra lista de profesores
+{% endblock %}
+
+{% block contenido %}
+	{% for elemento in profesores %}
+	<ul>
+	  	<li><strong><a href="/dato-profesor/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
+	</ul>
+	{% endfor %}
+
+<p><a class="btn btn-primary btn-large", href="/nuevoprof"> Ingresar nuevo profesor &raquo;</a></p>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+	{{usuario}}
+{% endblock titulo %}
+
+{% block contenido %}
+	<p>Este es el perfil de  {{usuario.username|upper}}, la ultima vez que lo vimos por aqui fuel el {{usuario.last_login}}.</p>
+	<p>Es miembro desde el {{usuario.date_joined}}</p>
+	<p>Email: {{usuario.email}}</p>
+{% endblock contenido %}

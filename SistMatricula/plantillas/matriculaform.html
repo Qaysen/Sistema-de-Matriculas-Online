@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2>Matrículas:</h2>
+	
+
+<form id='formulario' method='post' action=''>
+	<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='s87uCvMbECgfFLYgvL1MfkwW8lsmfbAV' />
+	</div>
+		<p><label for="id_fecha">Fecha:</label>
+			<input type="text" name="fecha" id="id_fecha" />
+		</p>
+		<p><label for="id_tipo">Tipo:</label>
+			<select name="tipo" id="id_tipo">
+				<option value="" selected="selected">---------</option>
+				<option value="1">regular</option>
+				<option value="2">irregular</option>
+				<option value="3">extemporaneo</option>
+			</select>
+		</p>
+		<p><label for="id_alumno">Alumno:</label>
+			<select name="tipo" id="id_tipo">
+				<option value="" selected="selected">---------</option>
+				{% for elemento in alumnos %}				
+				<option value="{{elemento.id}}">{{elemento.nombre}}</option>
+				{% endfor %}	
+			</select>  <a class="btn btn-secundary btn-small", href="/dato-alumno/nuevo">+</a></p>
+		<p><label for="id_curso">Curso:</label>
+			<select name="curso" id="id_curso">
+				<option value="" selected="selected">---------</option>
+				{% for elemento in cursos %}				
+				<option value="{{elemento.id}}">{{elemento.nombre}}</option>
+				{% endfor %}
+			</select>  <a class="btn btn-secundary btn-small", href="/nuevocur/">+</a>
+		</p>	
+		<p><input type='submit' class="btn btn-primary btn-large" value='Confirmar'/></p>	
+</form>
+
+
+
+{% endblock %}

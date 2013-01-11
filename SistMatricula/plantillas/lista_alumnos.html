@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Lista de Alumnos{%  endblock %}
+
+{% block encabezado %}
+	<h1> Lista de Alumnos</h1>
+{% endblock %}
+
+{% block nombre %}
+Muestra lista de alumnos
+{% endblock %}
+
+
+{% block contenido %}
+	{% for elemento in alumnos %}
+	<ul>
+	  <li><strong><a href="/dato-alumno/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
+	</ul>
+	{% endfor %}
+	<p><a class="btn btn-primary btn-large", href="/dato-alumno/nuevo">Ingresar nuevo alumno &raquo;</a></p>
+
+<table class="tabla">
+    <tr id="nombre_columna"><th>Nombre</th><th>Direccion</th><th>Teléfono</th><th>E-mail</th></tr>
+	{% for alum in alumnos %}
+	<tr><td>{{ alum.nombre }}</td>
+		<td>{{ alum.direccion }}</td>
+		<td>{{ alum.telefono }}</td>
+		<td>{{ alum.correo }}</td>
+		<td>{{ cliente.curso }}</td>
+		<td><a href="#">Editar</a></td>
+		<td><a href="#">Eliminar</a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+
+
+{% endblock %}
+

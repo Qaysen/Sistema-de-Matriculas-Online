@@ -1,0 +1,23 @@
+
+C:\Users\EDWIN\Desktop\SistMatricula>python manage.py syncdb
+
+
+Not synced (use migrations):
+ - principal
+(use ./manage.py migrate to migrate these)
+
+C:\Users\EDWIN\Desktop\SistMatricula>python manage.py schemamigration principal --auto
+
+C:\Users\EDWIN\Desktop\SistMatricula>python manage.py migrate principal
+
+
+C:\Users\EDWIN\Desktop\SistMatricula>python manage.py runserver
+
+
+
+C:\Users\EDWIN\Desktop\SistMatricula>python manage.py migrate principal
+
+
+
+
+

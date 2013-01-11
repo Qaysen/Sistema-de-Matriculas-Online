@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+	{{usuario}}
+{% endblock titulo %}
+
+{% block contenido %}
+	<p>Bienvenido {{usuario.username|upper}}, la ultima vez que te vimo por aqui fuel el {{usuario.last_login}}.</p>
+	<p>Eres miemro desde el {{usuario.date_joined}}</p>
+	<p>Email: {{usuario.email}}</p>
+	<p>Animal favorito: {{usuario.animal_favorito}}</p>
+{% endblock contenido %}
