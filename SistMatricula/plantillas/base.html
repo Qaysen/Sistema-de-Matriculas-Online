@@ -3,17 +3,18 @@
     <head>    
     <meta charset="utf-8"/>
     <title> {% block titulo %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="static/css/estilos.css">
-    <script src="prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/fiorella.css">
+        <script src="prefixfree.min.js"></script>
     </head>
 
     <body>   
         <header>
-        <hgroup>
-            <h1>Sistema de Matriculas</h1>
-            <h2>ESCUELA DE INFORMATICA</h2>
-        </hgroup>
+            <hgroup>
+                <h1>Sistema de Matriculas</h1>
+                <h2>ESCUELA DE INFORMATICA</h2>
+            </hgroup>
        
             <h3>{% block encabezado %}{% endblock %}</h3>
             <nav>
@@ -45,10 +46,10 @@
         
         </header>
 
-    <section>
+        <section>
             <article> {% block nombre %}{% endblock %} </article>
            <article> {% block contenido %}{% endblock %} </article>
-    </section>
+         </section>
     </body>
     <footer> Sistema desarrollado por QAYSEN</footer>
 </html>

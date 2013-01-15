@@ -1,0 +1,28 @@
+body 
+{
+	background: #222;
+	color: #EEE;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+}
+header
+{
+	background: url("/static/img/Fondo.png");
+	
+	margin: 0;/*es un error colocarle 10 de margin*/
+	padding: 1em 0; /*1em= 16px base del body, este tiene 4 valores  x x x x el primero arriba, der, aba, izq */
+	width: 100%;
+}
+header h1
+{
+	margin: 0;/*en los h1 los em no son de 16px sino del valor interno*/
+	/*text-shadow: #0ff 5px 5px 10px;*/
+	text-shadow: rgba(255,255,255,0.5) 5px 5px 10px;
+}
+header h2
+{
+	margin: 0;
+	font-weight: normal; /* le kita la negrita*/
+	text-shadow: rgba(255,0,0,0.7) 2px 2px 5px;
+}
