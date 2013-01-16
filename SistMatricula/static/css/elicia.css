@@ -1,0 +1,122 @@
+body
+{
+background: #555;
+color: #AAA;
+font-family: Arial;
+font-size: 16px;
+text-align: center;
+}
+header
+{
+background-size: 130px ,100px 100px;
+margin: 0 0 1em 0;
+padding: 0.5em 0;
+width: 100%;
+
+}
+
+header h1
+{
+margin: 0;
+text-shadow: rgba(255,0,0,0.5) 5px 5px 10px;
+}
+
+header h2
+{
+margin: 0;
+font-weight: normal;
+text-shadow: rgba(0,0,0,0.75) 2px 2px 5px;
+}
+
+
+nav,hgroup
+{
+display: inline-block;
+}
+
+nav
+{
+background: rgba(60,60,180,0.8);
+left: 0;
+display: inline-block;
+}
+
+
+nav li
+{
+	display: inline-block;
+
+}
+
+nav li a
+{
+background: #D23D15;
+border-radius: 0.5em;
+color: white;
+display: inline-block;
+margin: 0 1em 0 0;
+padding: 0.5em 1em;
+text-decoration: none;
+transition: all 0.5s ease;
+-webkit- transition: all 0.5s ease;
+}
+
+nav li a:hover
+{
+background: white;
+color: black;
+-webkit-transform: rotate(5deg) scale(1.2);
+transform: rotate(5deg) scale(1.2);
+}
+
+#cochecito
+{
+background: white;
+color: #222;
+text-align: left;
+width: 50%;
+}
+
+#cochecito figcaption
+{
+margin: 1em;
+}
+
+#cochecito img
+{
+width: 100%;
+}
+
+#cochecito, #historia
+{
+display: inline-block;
+vertical-align: top;
+}
+
+#contenido
+{
+background: #D23D15;
+border-radius: 0.5em;
+color: white;
+margin: 0 1em 0 0;
+padding: 0.5em 1em;
+text-decoration: none;
+width: 50%;
+float: left;
+
+}
+
+#logo {
+margin: 0.0em;
+padding: 0.0em;
+text-align: center;
+background: rgba(60,60,180,0.8);
+vertical-align: top;
+overflow:top;
+}
+
+.formulario
+{
+display: inline-block;
+width: 20%;
+}

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang='es'> 
+<html class="no-js" lang='es'> 
     <head>    
-        <meta charset="utf-8"/>
-        <title> {% block titulo %}{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/elicia.css">
-        <script type="text/javascript" src="prefixfree.min.js"></script>
-
+    <meta charset="utf-8"/>
+    <title> {% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/fiorella.css">
+        <script src="prefixfree.min.js"></script>
     </head>
 
     <body>   
-        <header>     
-            <hgroup id="logo">
-                    <h1>Sistema de Matriculas</h1>
-                    <h2>ESCUELA DE INFORMATICA</h2>
+        <header>
+            <hgroup>
+                <h1>Sistema de Matriculas</h1>
+                <h2>ESCUELA DE INFORMATICA</h2>
             </hgroup>
-            <nav>        
-
+       
+            <h3>{% block encabezado %}{% endblock %}</h3>
+            <nav>
                 <ul>
 
                     <li><a href="/alumnos">Alumnos</a></li>
@@ -32,7 +33,7 @@
                     <li><a  href="/cerrar/">Cerrar</a></li>
                 </ul>                        
                 {% else %}
-                <form  class="formulario" action='/login/' method='post'>
+                <form  action='/login/' method='post'>
                     {% csrf_token %}
                     <input  type="text" name="username" value="" id="username">
                     <input  type="password" name="password" value="" id="password">
@@ -42,12 +43,12 @@
                 {% endif %} 
                 <a  href="/usuario/nuevo">Regístrate &raquo;</a> 
             </nav>         
-        </header>
+        
+        </header>
 
         <section>
-             <h3>{% block encabezado %}{% endblock %}</h3>
             <article> {% block nombre %}{% endblock %} </article>
-            <article id="contenido"> {% block contenido %}{% endblock %} </article>
+           <article> {% block contenido %}{% endblock %} </article>
          </section>
     </body>
     <footer> Sistema desarrollado por QAYSEN</footer>
