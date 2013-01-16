@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <title> {% block titulo %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/normalize.css">
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/elicia.css">
         <script type="text/javascript" src="prefixfree.min.js"></script>
 
@@ -14,17 +15,26 @@
             <hgroup id="logo">
                     <h1>Sistema de Matriculas</h1>
                     <h2>ESCUELA DE INFORMATICA</h2>
+=======
+        <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/estilos.css">
+        <script src="prefixfree.min.js"></script>
+    </head>
+
+    <body>   
+        <header id="encabezado">
+            <hgroup id="logo">
+                <h1 class="titulo">Sistema de Matriculas</h1>
+                <h2>ESCUELA DE INFORMATICA</h2><br>
+>>>>>>> 0134443b4b3b74b563e567f528e6da3aadf570d6
             </hgroup>
             <nav>        
 
                 <ul>
-
-                    <li><a href="/alumnos">Alumnos</a></li>
+                    <li><a href="/alumnos" target="_blank" title="Alumnos">Alumnos</a></li>
                     <li><a href="/cursos">Cursos</a></li>
                     <li><a href="/profesores">Profesores</a></li>
                     <li><a href="/contactenos">Contáctenos</a></li>
                     <li><a href="/matriculas">Matricula</a></li>
-
                 </ul>
                 {% if user.is_authenticated %}
                 <ul>
