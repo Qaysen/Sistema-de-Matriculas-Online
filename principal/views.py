@@ -160,3 +160,21 @@ def perfil(request, username):
 	else:
 		return render_to_response('perfil_no_logueado.html', {'usuario':usuario_no_logueado}, context_instance=RequestContext(request)) 
 		
+@login_required
+def editar_alumno(request, object_id):
+    try:
+        alumno = Alumno.objects.get(id = object_id)
+
+    except Alumno.DoesNotExist:
+        pass
+
+    if request.POST:
+        form = EditarAlumno(request.POST, instance = alumno)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/alumnos/')
+        else:
+            form = EditarAlumno(instance = alumno)
+
+    return render_to_response("editar_alumno.html", {"alumno": alumno, 'form': form})

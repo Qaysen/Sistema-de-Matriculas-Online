@@ -24,3 +24,7 @@ class ContactoForm(forms.Form):
 class MatriculaForm(ModelForm):
 	class Meta:
 		model=Matricula
+
+class EditarAlumno(forms.ModelForm):
+    class Meta:
+        model = Alumno

@@ -6,13 +6,15 @@ font-family: Arial;
 font-size: 16px;
 text-align: center;
 }
+
+
 header
 {
+background: rgba(60,60,180,0.8);
 background-size: 130px ,100px 100px;
-margin: 0 0 1em 0;
-padding: 0.5em 0;
+margin: 0 0 0 0;
+padding: 0 0;
 width: 100%;
-
 }
 
 header h1
@@ -24,28 +26,31 @@ text-shadow: rgba(255,0,0,0.5) 5px 5px 10px;
 header h2
 {
 margin: 0;
-font-weight: normal;
+font-weight: 10%;
 text-shadow: rgba(0,0,0,0.75) 2px 2px 5px;
 }
 
-
-nav,hgroup
+menu ul li
 {
 display: inline-block;
+font-size: 20px;
+font-weight: bold;
+padding: 0 2px;
+text-decoration: none;
 }
+
 
 nav
 {
-background: rgba(60,60,180,0.8);
-left: 0;
-display: inline-block;
+border-left:1px solid #FFFFFF;
+margin: -5px;
+padding: 0;
 }
 
 
 nav li
 {
-	display: inline-block;
-
+display: inline-block;
 }
 
 nav li a
@@ -69,54 +74,137 @@ color: black;
 transform: rotate(5deg) scale(1.2);
 }
 
-#cochecito
+#posicion
 {
-background: white;
-color: #222;
-text-align: left;
-width: 50%;
+position:absolute;
+top: 170px;
+left: 50px;
+width: 500px;
+height: auto;
+
 }
 
-#cochecito figcaption
+#subtitulo
 {
-margin: 1em;
-}
-
-#cochecito img
-{
+background:white;
+color:black;
+border-radius: 0.5em;
+border:5px solid #000;
+text-decoration: none;
 width: 100%;
+float: left;
+margin: 2px;
+text-shadow: -3px 5px 4px #777;color:#004080;
 }
 
-#cochecito, #historia
+
+#cerrar
 {
-display: inline-block;
-vertical-align: top;
+font-size: 16px;
 }
 
 #contenido
 {
-background: #D23D15;
+background: white;
+color:black;
 border-radius: 0.5em;
-color: white;
-margin: 0 1em 0 0;
-padding: 0.5em 1em;
+border:5px solid #000;
 text-decoration: none;
-width: 50%;
+width: 100%;
 float: left;
+margin: 2px;
 
 }
 
-#logo {
+#divider-vertical 
+{
+	position: 20px;
+    float: left;
+    width: 1px;
+    height: 40px;
+    margin: 0px 10px;
+        margin-top: 0px;
+        margin-right-value: 10px;
+        margin-bottom: 0px;
+        margin-left-value: 10px;
+        margin-left-ltr-source: physical;
+        margin-left-rtl-source: physical;
+        margin-right-ltr-source: physical;
+        margin-right-rtl-source: physical;
+    background-color: rgb(229, 229, 229);
+    border-right: 1px solid rgb(255, 255, 255);
+        border-right-width-value: 1px;
+        border-right-style-value: solid;
+        border-right-color-value: rgb(255, 255, 255);
+        border-right-width-ltr-source: physical;
+        border-right-width-rtl-source: physical;
+        border-right-style-ltr-source: physical;
+        border-right-style-rtl-source: physical;
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical;
+}
+
+#logo 
+{
+border-right:1px solid #D95B43;
 margin: 0.0em;
-padding: 0.0em;
+padding: 1em;
 text-align: center;
-background: rgba(60,60,180,0.8);
-vertical-align: top;
-overflow:top;
+vertical-align: middle;
 }
 
-.formulario
+
+#logo,#enlaces,#login
 {
 display: inline-block;
-width: 20%;
+vertical-align: top;	
 }
+
+#logo
+{
+display: inline-block;
+}
+
+ 
+#login
+{
+float: right;
+}
+
+#registrar, #nombre, #cerrar
+{
+text-decoration: none;
+color: white;
+}
+
+.lista
+{
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.lista li
+{
+margin:2px;
+padding: 3px;
+}
+
+.lista li a 
+{
+background: white;
+color: black;
+font-size: 20px;
+text-decoration: none;
+transition: all 0.5s ease;
+-webkit- transition: all 0.5s ease;
+}
+
+.lista li a:hover 
+{
+color: red;
+display: inline-block;
+-webkit-transform:scale(1.2);
+transform:  scale(1.2);
+}
+

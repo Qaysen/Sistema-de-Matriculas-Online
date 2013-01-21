@@ -12,7 +12,7 @@ Muestra lista de cursos
 {% block contenido %}
 
 	{% for elemento in cursos %}
-	<ul>
+	<ul class="lista">
 	  <li><strong><a href="/dato-curso/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
 	</ul>
 	{% endfor %}

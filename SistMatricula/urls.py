@@ -26,5 +26,5 @@ urlpatterns = patterns('',
     url(r'^cerrar/$', 'principal.views.cerrar'),
     url(r'^login/$', 'principal.views.mylogin'),
     url(r'^(?P<username>[-\w]+)/$', 'principal.views.perfil'),
-
+    url(r'^alumnos/editar/(.+)/$', 'principal.views.editar_alumno'),
 )

@@ -1,0 +1,47 @@
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+body
+{
+	font:16px;
+}
+
+header
+{
+	max-height: 50px;
+	background: rgba(187, 188, 0,0.2);
+	min-width: 1200px;
+}
+
+nav ul li,menu ul li
+{
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+#logo
+{
+font-size: 1.2em;
+}
+
+#login
+{
+	float: right;
+}
+
+#logo,#enlaces,#login
+{
+	display: inline-block;
+	vertical-align: top;	
+}
+
+.centrar
+{
+	width: 1200px;
+	margin: 0 auto;
+}

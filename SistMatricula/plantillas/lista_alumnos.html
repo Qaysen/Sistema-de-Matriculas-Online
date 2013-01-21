@@ -13,25 +13,28 @@ Muestra lista de alumnos
 
 {% block contenido %}
 	{% for elemento in alumnos %}
-	<ul>
+	<ul class="lista">
 	  <li><strong><a href="/dato-alumno/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
 	</ul>
 	{% endfor %}
-	<p><a class="btn btn-primary btn-large", href="/dato-alumno/nuevo">Ingresar nuevo alumno &raquo;</a></p>
+	<p>
+		<a href="/dato-alumno/nuevo">Ingresar nuevo alumno &raquo;</a>
 
-<table class="tabla">
-    <tr id="nombre_columna"><th>Nombre</th><th>Direccion</th><th>Teléfono</th><th>E-mail</th></tr>
-	{% for alum in alumnos %}
-	<tr><td>{{ alum.nombre }}</td>
-		<td>{{ alum.direccion }}</td>
-		<td>{{ alum.telefono }}</td>
-		<td>{{ alum.correo }}</td>
-		<td>{{ cliente.curso }}</td>
-		<td><a href="#">Editar</a></td>
-		<td><a href="#">Eliminar</a></td>
-	</tr>
-	{% endfor %}
-</table>
+	</p>
+
+	<table class="tabla">
+	    <tr id="nombre_columna"><th>Nombre</th><th>Direccion</th><th>Teléfono</th><th>E-mail</th></tr>
+		{% for alum in alumnos %}
+		<tr><td>{{ alum.nombre }}</td>
+			<td>{{ alum.direccion }}</td>
+			<td>{{ alum.telefono }}</td>
+			<td>{{ alum.correo }}</td>
+			<td>{{ cliente.curso }}</td>
+			<td><a href="/alumnos/editar/{{alum.id}}">Editar</a></td>
+			<td><a href="#">Eliminar</a></td>
+		</tr>
+		{% endfor %}
+	</table>
 
 
 

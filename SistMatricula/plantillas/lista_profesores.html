@@ -11,7 +11,7 @@ Muestra lista de profesores
 
 {% block contenido %}
 	{% for elemento in profesores %}
-	<ul>
+	<ul class="lista">
 	  	<li><strong><a href="/dato-profesor/{{elemento.id}}">{{elemento.nombre}}</a></strong></li>
 	</ul>
 	{% endfor %}
